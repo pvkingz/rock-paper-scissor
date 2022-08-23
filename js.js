@@ -1,11 +1,6 @@
 console.log("Hello World!")
 
-/* 
-1. create play arrays [Rock, paper, scissor]
-2. Player inputs rock paper or scissor
-3. Computer randomly chooses between 1-3
-4. Compare answers
-*/
+
 
 let playerScore = 0;
 let compScore = 0;
@@ -18,12 +13,8 @@ const getComputerChoice = () => {
 }
 
 const playRound = (playerSelection, computerSelection) => {
-    if (playerSelection === "rock" && computerSelection === "rock") {
-        return "You tied! You both picked rock"
-    } else if (playerSelection === "scissor" && computerSelection === "scissor") {
-        return "You tied! You both picked scissor"
-    } else if (playerSelection === "paper" && computerSelection === "paper") {
-        return "You tied! You both picked paper"
+    if (playerSelection === computerSelection) {
+        return `You tied! You both picked ${playerSelection}`
     } else if (playerSelection === "scissor" && computerSelection === "rock") {
         compScore++;
         return "You lost! Rock crushes scissor"
